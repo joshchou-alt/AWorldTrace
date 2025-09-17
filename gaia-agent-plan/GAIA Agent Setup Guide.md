@@ -147,15 +147,9 @@ uv run examples/gaia/run.py --start 10 --end 50 --split validation
 
 ### Dataset Path Configuration
 
-To evaluate test dataset set the dataset path on line 345 of `evaluate_agent.py`
+To evaluate test dataset set the dataset path on `.env`
 ```bash
-validation_data_path = os.path.join(os.path.dirname(__file__), 'dataset/GAIA/2023/test/metadata.jsonl')
+GAIA_DATASET_PATH="dataset/GAIA/2023"
 ```
-
-### Tool Configuration
-
-- **Search**: Configure SearxNG instance URL
-- **Code Execution**: Customize import whitelist and security settings
-- **Document Processing**: Set cache directories and processing limits
 
 ---

@@ -133,3 +133,6 @@ examples/**/workspaces
 examples/**/data
 examples/**/*.bak
 =**
+
+gaia_run/
+*/dataset

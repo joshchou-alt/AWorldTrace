@@ -29,6 +29,8 @@ source .venv/bin/activate
 
 ```bash
 uv pip install -r requirements.txt
+# Install PDF processing dependencies
+uv pip install "marker-pdf[full]" --no-deps
 ```
 > **⚠️ Important**: 
 > It is important to run two times the command due to a uv error (Try increasing UV_HTTP_TIMEOUT (current value: 30s))
@@ -36,15 +38,8 @@ uv pip install -r requirements.txt
 6. Install the **AWorld framework** and build the web UI (Optional):
 
 ```bash
-# Install PDF processing dependencies
-uv pip install "marker-pdf[full]" --no-deps
-
 # Install AWorld
 uv run python setup.py install
-
-#Optional
-# Build web UI
-sh -c "cd aworld/cmd/web/webui && npm install && npm run build"
 ```
 
 ### System Dependencies Installation
