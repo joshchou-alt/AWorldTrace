@@ -38,8 +38,8 @@ logger = logging.getLogger(__name__)
 
 def setup_enhanced_logging(args):
     """Setup enhanced logging for tracing runs."""
-    log_dir = Path(os.getenv("AWORLD_WORKSPACE", "~")) / "tracing_logs"
-    log_dir.mkdir(exist_ok=True)
+    log_dir = Path(os.getenv("AWORLD_WORKSPACE", "~")).expanduser() / "tracing_logs"
+    log_dir.mkdir(parents=True, exist_ok=True)
     
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     log_file = log_dir / f"gaia_tracing_{timestamp}_{args.start}_{args.end}.log"
@@ -76,11 +76,11 @@ def main():
     
     # Setup output directory for traces
     if args.trace_output:
-        trace_dir = Path(args.trace_output)
+        trace_dir = Path(args.trace_output).expanduser()
     else:
-        trace_dir = Path(os.getenv("AWORLD_WORKSPACE", "~")) / "gaia_traces"
+        trace_dir = Path(os.getenv("AWORLD_WORKSPACE", "~")).expanduser() / "gaia_traces"
     
-    trace_dir.mkdir(exist_ok=True)
+    trace_dir.mkdir(parents=True, exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     
     logger.info(f"Starting GAIA benchmark with tracing")
@@ -131,7 +131,7 @@ def main():
     task_runner = TracingTaskRunner(tracing_agent)
     
     # Load existing results
-    results_file = Path(os.getenv("AWORLD_WORKSPACE", "~")) / "results.json"
+    results_file = Path(os.getenv("AWORLD_WORKSPACE", "~")).expanduser() / "results.json"
     if results_file.exists():
         with open(results_file, "r", encoding="utf-8") as f:
             results: List[Dict[str, Any]] = json.load(f)
@@ -255,6 +255,7 @@ def main():
     
     finally:
         # Save results
+        results_file.parent.mkdir(parents=True, exist_ok=True)
         with open(results_file, "w", encoding="utf-8") as f:
             json.dump(results, f, indent=4, ensure_ascii=False)
         
