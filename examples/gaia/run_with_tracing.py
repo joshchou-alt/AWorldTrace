@@ -36,9 +36,18 @@ from tracer_integration import GaiaTracingAgent, TracingTaskRunner
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+_DEFAULT_WORKSPACE = (Path(__file__).parent / "~").resolve()
+
+def get_workspace_path() -> Path:
+    """Resolve the base directory for logs, traces, and results."""
+    workspace_env = os.getenv("AWORLD_WORKSPACE")
+    if workspace_env:
+        return Path(workspace_env).expanduser()
+    return _DEFAULT_WORKSPACE
+
 def setup_enhanced_logging(args):
     """Setup enhanced logging for tracing runs."""
-    log_dir = Path(os.getenv("AWORLD_WORKSPACE", "~")).expanduser() / "tracing_logs"
+    log_dir = get_workspace_path() / "tracing_logs"
     log_dir.mkdir(parents=True, exist_ok=True)
     
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -78,7 +87,7 @@ def main():
     if args.trace_output:
         trace_dir = Path(args.trace_output).expanduser()
     else:
-        trace_dir = Path(os.getenv("AWORLD_WORKSPACE", "~")).expanduser() / "gaia_traces"
+        trace_dir = get_workspace_path() / "gaia_traces"
     
     trace_dir.mkdir(parents=True, exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -131,7 +140,7 @@ def main():
     task_runner = TracingTaskRunner(tracing_agent)
     
     # Load existing results
-    results_file = Path(os.getenv("AWORLD_WORKSPACE", "~")).expanduser() / "results.json"
+    results_file = get_workspace_path() / "results.json"
     if results_file.exists():
         with open(results_file, "r", encoding="utf-8") as f:
             results: List[Dict[str, Any]] = json.load(f)
