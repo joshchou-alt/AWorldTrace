@@ -47,7 +47,7 @@ def get_workspace_path() -> Path:
 
 def setup_enhanced_logging(args):
     """Setup enhanced logging for tracing runs."""
-    log_dir = get_workspace_path() / "tracing_logs"
+    log_dir = (Path(__file__).parent / "~" / "tracing_logs").resolve()
     log_dir.mkdir(parents=True, exist_ok=True)
     
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -87,7 +87,7 @@ def main():
     if args.trace_output:
         trace_dir = Path(args.trace_output).expanduser()
     else:
-        trace_dir = get_workspace_path() / "gaia_traces"
+        trace_dir = Path(__file__).parent / "~" / "gaia_traces"
     
     trace_dir.mkdir(parents=True, exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -140,7 +140,7 @@ def main():
     task_runner = TracingTaskRunner(tracing_agent)
     
     # Load existing results
-    results_file = get_workspace_path() / "results.json"
+    results_file = (Path(__file__).parent / "~" / "results.json").resolve()
     if results_file.exists():
         with open(results_file, "r", encoding="utf-8") as f:
             results: List[Dict[str, Any]] = json.load(f)

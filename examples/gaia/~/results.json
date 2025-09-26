@@ -7,8 +7,8 @@
         "response": "egalitarian",
         "is_correct": true,
         "trace_metadata": {
-            "agent_traces": 12,
-            "has_llm_calls": false
+            "agent_traces": 10,
+            "has_llm_calls": true
         }
     },
     {
@@ -19,7 +19,7 @@
         "response": "34689",
         "is_correct": true,
         "trace_metadata": {
-            "agent_traces": 7,
+            "agent_traces": 8,
             "has_llm_calls": false
         }
     },
@@ -55,7 +55,7 @@
         "response": "17000",
         "is_correct": false,
         "trace_metadata": {
-            "agent_traces": 4,
+            "agent_traces": 14,
             "has_llm_calls": false
         }
     },
@@ -91,7 +91,7 @@
         "response": "142",
         "is_correct": true,
         "trace_metadata": {
-            "agent_traces": 7,
+            "agent_traces": 5,
             "has_llm_calls": false
         }
     },
@@ -100,8 +100,8 @@
         "level": 2,
         "question": "According to github, when was Regression added to the oldest closed numpy.polynomial issue that has the Regression label in MM/DD/YY?",
         "answer": "04/15/18",
-        "response": "12/20/22",
-        "is_correct": false,
+        "response": "04/15/18",
+        "is_correct": true,
         "trace_metadata": {
             "agent_traces": 3,
             "has_llm_calls": false
@@ -116,6 +116,210 @@
         "is_correct": true,
         "trace_metadata": {
             "agent_traces": 3,
+            "has_llm_calls": false
+        }
+    },
+    {
+        "task_id": "676e5e31-a554-4acc-9286-b60d90a92d26",
+        "level": 3,
+        "question": "In July 2, 1959 United States standards for grades of processed fruits, vegetables, and certain other products listed as dehydrated, consider the items in the \"dried and dehydrated section\" specifically marked as dehydrated along with any items in the Frozen/Chilled section that contain the whole name of the item, but not if they're marked Chilled. As of August 2023, what is the percentage (to the nearest percent) of those standards that have been superseded by a new version since the date given in the 1959 standards?",
+        "answer": "86",
+        "response": "Search did not return a direct list of the 1959 \"dried and dehydrated\" standards. Next, I will search for the full text or a scan of the 1959 USDA standards for processed fruits and vegetables, focusing on the dehydrated and frozen/chilled sections, to extract the required list of items.",
+        "is_correct": false,
+        "trace_metadata": {
+            "agent_traces": 2,
+            "has_llm_calls": false
+        }
+    },
+    {
+        "task_id": "7dd30055-0198-452e-8c25-f73dbe27dcb8",
+        "level": 2,
+        "question": "Using the Biopython library in Python, parse the PDB file of the protein identified by the PDB ID 5wb7 from the RCSB Protein Data Bank. Calculate the distance between the first and second atoms as they are listed in the PDB file. Report the answer in Angstroms, rounded to the nearest picometer. Here are the necessary files: /Users/joshchou/repos/AWorldTrace/dataset/GAIA/2023/validation/7dd30055-0198-452e-8c25-f73dbe27dcb8.pdb",
+        "answer": "1.456",
+        "response": "145642",
+        "is_correct": false,
+        "trace_metadata": {
+            "agent_traces": 8,
+            "has_llm_calls": false
+        }
+    },
+    {
+        "task_id": "2a649bb1-795f-4a01-b3be-9a01868dae73",
+        "level": 2,
+        "question": "What are the EC numbers of the two most commonly used chemicals for the virus testing method in the paper about SPFMV and SPCSV in the Pearl Of Africa from 2016? Return the semicolon-separated numbers in the order of the alphabetized chemicals.",
+        "answer": "3.1.3.1; 1.11.1.7",
+        "response": "3.1.3.1;N/A",
+        "is_correct": false,
+        "trace_metadata": {
+            "agent_traces": 7,
+            "has_llm_calls": false
+        }
+    },
+    {
+        "task_id": "87c610df-bef7-4932-b950-1d83ef4e282b",
+        "level": 2,
+        "question": "In April of 1977, who was the Prime Minister of the first place mentioned by name in the Book of Esther (in the New International Version)?",
+        "answer": "Morarji Desai",
+        "response": "Morarji Desai",
+        "is_correct": true,
+        "trace_metadata": {
+            "agent_traces": 4,
+            "has_llm_calls": false
+        }
+    },
+    {
+        "task_id": "624cbf11-6a41-4692-af9c-36b3e5ca3130",
+        "level": 2,
+        "question": "What's the last line of the rhyme under the flavor name on the headstone visible in the background of the photo of the oldest flavor's headstone in the Ben & Jerry's online flavor graveyard as of the end of 2022?",
+        "answer": "So we had to let it die.",
+        "response": "On the sixth of November",
+        "is_correct": false,
+        "trace_metadata": {
+            "agent_traces": 7,
+            "has_llm_calls": false
+        }
+    },
+    {
+        "task_id": "dd3c7503-f62a-4bd0-9f67-1b63b94194cc",
+        "level": 2,
+        "question": "Use density measures from the chemistry materials licensed by Marisa Alviar-Agnew & Henry Agnew under the CK-12 license in LibreText's Introductory Chemistry materials as compiled 08/21/2023.\n\nI have a gallon of honey and a gallon of mayonnaise at 25C. I remove one cup of honey at a time from the gallon of honey. How many times will I need to remove a cup to have the honey weigh less than the mayonaise? Assume the containers themselves weigh the same.",
+        "answer": "6",
+        "response": "6",
+        "is_correct": true,
+        "trace_metadata": {
+            "agent_traces": 4,
+            "has_llm_calls": false
+        }
+    },
+    {
+        "task_id": "5d0080cb-90d7-4712-bc33-848150e917d3",
+        "level": 1,
+        "question": "What was the volume in m^3 of the fish bag that was calculated in the University of Leicester paper \"Can Hiccup Supply Enough Fish to Maintain a Dragon’s Diet?\"",
+        "answer": "0.1777",
+        "response": "0.1777",
+        "is_correct": true,
+        "trace_metadata": {
+            "agent_traces": 5,
+            "has_llm_calls": false
+        }
+    },
+    {
+        "task_id": "bec74516-02fc-48dc-b202-55e78d0e17cf",
+        "level": 3,
+        "question": "What is the average number of pre-2020 works on the open researcher and contributor identification pages of the people whose identification is in this file? Here are the necessary files: /Users/joshchou/repos/AWorldTrace/dataset/GAIA/2023/validation/bec74516-02fc-48dc-b202-55e78d0e17cf.jsonld",
+        "answer": "26.4",
+        "response": "25",
+        "is_correct": false,
+        "trace_metadata": {
+            "agent_traces": 5,
+            "has_llm_calls": false
+        }
+    },
+    {
+        "task_id": "a1e91b78-d3d8-4675-bb8d-62741b4b68a6",
+        "level": 1,
+        "question": "In the video https://www.youtube.com/watch?v=L1vXCYZAYYM, what is the highest number of bird species to be on camera simultaneously?",
+        "answer": "3",
+        "response": "3",
+        "is_correct": true,
+        "trace_metadata": {
+            "agent_traces": 4,
+            "has_llm_calls": false
+        }
+    },
+    {
+        "task_id": "46719c30-f4c3-4cad-be07-d5cb21eee6bb",
+        "level": 1,
+        "question": "Of the authors (First M. Last) that worked on the paper \"Pie Menus or Linear Menus, Which Is Better?\" in 2015, what was the title of the first paper authored by the one that had authored prior papers?",
+        "answer": "Mapping Human Oriented Information to Software Agents for Online Systems Usage",
+        "response": "A comparative study of the usability of touch-based and mouse-based interaction",
+        "is_correct": false,
+        "trace_metadata": {
+            "agent_traces": 8,
+            "has_llm_calls": false
+        }
+    },
+    {
+        "task_id": "df6561b2-7ee5-4540-baab-5095f742716a",
+        "level": 2,
+        "question": "When you take the average of the standard population deviation of the red numbers and the standard sample deviation of the green numbers in this image using the statistics module in Python 3.11, what is the result rounded to the nearest three decimal points? Here are the necessary image files: /Users/joshchou/repos/AWorldTrace/dataset/GAIA/2023/validation/df6561b2-7ee5-4540-baab-5095f742716a.png",
+        "answer": "17.056",
+        "response": "17.136",
+        "is_correct": false,
+        "trace_metadata": {
+            "agent_traces": 3,
+            "has_llm_calls": false
+        }
+    },
+    {
+        "task_id": "00d579ea-0889-4fd9-a771-2c8d79835c8d",
+        "level": 3,
+        "question": "Assuming scientists in the famous youtube video The Thinking Machine (Artificial Intelligence in the 1960s) were interviewed the same year, what is the name of the scientist predicting the sooner thinking machines or robots? Answer using the format First name Last name",
+        "answer": "Claude Shannon",
+        "response": "Claude Shannon",
+        "is_correct": true,
+        "trace_metadata": {
+            "agent_traces": 8,
+            "has_llm_calls": false
+        }
+    },
+    {
+        "task_id": "4b6bb5f7-f634-410e-815d-e673ab7f8632",
+        "level": 1,
+        "question": "In Series 9, Episode 11 of Doctor Who, the Doctor is trapped inside an ever-shifting maze. What is this location called in the official script for the episode? Give the setting exactly as it appears in the first scene heading.",
+        "answer": "THE CASTLE",
+        "response": "INT. THE CASTLE - DAY.",
+        "is_correct": false,
+        "trace_metadata": {
+            "agent_traces": 5,
+            "has_llm_calls": false
+        }
+    },
+    {
+        "task_id": "f0f46385-fc03-4599-b5d3-f56496c3e69f",
+        "level": 2,
+        "question": "In terms of geographical distance between capital cities, which 2 countries are the furthest from each other within the ASEAN bloc according to wikipedia? Answer using a comma separated list, ordering the countries by alphabetical order.",
+        "answer": "Indonesia, Myanmar",
+        "response": "Indonesia, Myanmar",
+        "is_correct": true,
+        "trace_metadata": {
+            "agent_traces": 14,
+            "has_llm_calls": false
+        }
+    },
+    {
+        "task_id": "384d0dd8-e8a4-4cfe-963c-d37f256e7662",
+        "level": 3,
+        "question": "In the NCATS PubChem compound database for Food Additive Status classification, find the compound that has a molecular weight of 100 g/mol or less, 6 heavy atoms, 1 or fewer hydrogen bond acceptors, and a complexity between 10 and 15. Of the shared gene-chemical co-occurrences between its two possible enzyme transformations, what is the PubChem CID of the heaviest by molecular weight?",
+        "answer": "4192",
+        "response": "The PubChem entry for hexane (CID 8058) does not provide explicit information about enzyme transformations or metabolic pathways in its \"Pharmacology and Biochemistry\" or \"Interactions and Pathways\" sections. These sections exist but do not contain detailed content about enzyme-catalyzed transformations for hexane.\n\n### Reasoning & Next Steps\n\n- Without explicit enzyme transformation data from PubChem, it is not possible to directly identify the two possible enzyme transformations for hexane from this source.\n- The rest of the question (shared gene-chemical co-occurrences and the heaviest by molecular weight) depends on having those two enzyme transformations.\n\n#### Next Step\nSince PubChem does not provide the required enzyme transformation data for hexane, the task cannot be completed as specified using only PubChem's compound database and the available tools.\n\nIf you would like, I can attempt to answer the question using general biochemical knowledge (e.g., likely transformations of hexane in biological systems), or you can provide a different compound or more information. Please advise how you would like to proceed.",
+        "is_correct": false,
+        "trace_metadata": {
+            "agent_traces": 15,
+            "has_llm_calls": false
+        }
+    },
+    {
+        "task_id": "e4e91f1c-1dcd-439e-9fdd-cb976f5293fd",
+        "level": 2,
+        "question": "I need to fact-check a citation. This is the citation from the bibliography:\n\nGreetham, David. \"Uncoupled: OR, How I Lost My Author(s).\" Textual Cultures: Texts, Contexts, Interpretation, vol. 3 no. 1, 2008, p. 45-46. Project MUSE, doi:10.2979/tex.2008.3.1.44.\n\nAnd this is the in-line citation:\n\nOur relationship with the authors of the works we read can often be “obscured not by a \"cloak of print\" but by the veil of scribal confusion and mis-transmission” (Greetham 45-46).\n\nDoes the quoted text match what is actually in the article? If Yes, answer Yes, otherwise, give me the word in my citation that does not match with the correct one (without any article).",
+        "answer": "cloak",
+        "response": "There is no Wikipedia article or summary available for \"Uncoupled: OR, How I Lost My Author(s)\" by David Greetham.\n\n### Reasoning and Next Steps\n- Direct extraction from the PDF is not possible due to access limitations.\n- Web search did not yield the original text, only secondary references.\n- Wikipedia and academic summaries do not contain the passage.\n\nThe only way to definitively fact-check this citation is to access the article directly through a library or institutional subscription to Project MUSE, or to find a full-text preview elsewhere.\n\n**Alternative Step:**  \nI will try to find a preview or snippet of the article on Google Books or another academic preview platform, focusing on the phrase \"cloak of print\" and \"veil of scribal confusion and mis-transmission\" to see if any snippet from the original article is available.\n\nWould you like me to continue searching for a preview, or do you have access to the article PDF that you can upload? If you can upload the PDF, I can extract and check the text directly.",
+        "is_correct": false,
+        "trace_metadata": {
+            "agent_traces": 6,
+            "has_llm_calls": false
+        }
+    },
+    {
+        "task_id": "56137764-b4e0-45b8-9c52-1866420c3df5",
+        "level": 2,
+        "question": "Which contributor to the version of OpenCV where support was added for the Mask-RCNN model has the same name as a former Chinese head of government when the names are transliterated to the Latin alphabet?",
+        "answer": "Li Peng",
+        "response": "Li Peng",
+        "is_correct": true,
+        "trace_metadata": {
+            "agent_traces": 7,
             "has_llm_calls": false
         }
     }
